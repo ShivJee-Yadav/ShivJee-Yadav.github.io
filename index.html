@@ -116,31 +116,54 @@
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
                         <h2 class="text-white mb-5">Drop an E-mail</h2>
-                        <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Email address input-->
-                            <div class="row input-group-newsletter">
-                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                <!-- <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div> -->
+        
+                        <!-- ✅ Start of Formspree Integrated Form -->
+                        <form action="https://formspree.io/f/xpwdroly" method="POST" id="contactForm">
+                            <!-- Email input -->
+                            <div class="row input-group-newsletter mb-3">
+                                <div class="col">
+                                    <input class="form-control" type="email" name="email" placeholder="Enter email address..." required>
+                                </div>
                             </div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3 mt-2 text-white">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                  </div>
+                        
+                            <!-- Message input -->
+                            <div class="row input-group-newsletter mb-3">
+                                <div class="col">
+                                    <textarea class="form-control" name="message" placeholder="Enter your message..." rows="2" required></textarea>
+                                </div>
                             </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                        
+                            <!-- Submit button -->
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-primary" type="submit">Send</button>
+                                </div>
+                            </div>
                         </form>
+                        
+                        <!-- Success Message -->
+                        <div id="successMessage" style="display:none; color: rgb(255, 255, 255);">
+                            <h2>Thank you for your message! We’ll get back to you soon.</h2>
+                        </div>
+                        
+                        <script>
+                            document.getElementById('contactForm').onsubmit = function(event) {
+                                event.preventDefault(); // Prevent the default form submission
+                                // Show the success message
+                                document.getElementById('successMessage').style.display = 'block';
+                                // Optionally hide the form after submission
+                                document.getElementById('contactForm').style.display = 'none';
+                                // You can also make an Ajax request here if you want to handle it in the background.
+                            };
+                        </script>
+                        
+                        <!-- ✅ End of Formspree Integrated Form -->
+        
                     </div>
                 </div>
             </div>
         </section>
+        
         <!-- Contact-->
         <section class="contact-section bg-black">
             <div class="container px-4 px-lg-5">
@@ -163,8 +186,8 @@
                                 <hr class="my-4 mx-auto" />
                                 <!-- <span id="email-link"></span>
                                 <span id="email-link"></span> -->
-                                <div class="small text-black-50"><a href="mailto:shivyadav1936@gmail.com">Personal E-Mail</a></div>
-                                <div class="small text-black-50"><a href="mailto:b23ee1095@iitj.ac.in">College E-Mail</a></div>
+                                <div class="small text-black-50"><a href="mailto:shivyadav1936@gmail.com">shivyadav1936@gmail.com</a></div>
+                                <div class="small text-black-50"><a href="mailto:b23ee1095@iitj.ac.in">b23ee1095@iitj.ac.in</a></div>
                             </div>
                         </div>
                     </div>
@@ -203,7 +226,7 @@
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; 2025 , Visit Again </div></footer>
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; 2025 , Thanks for Visit </div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

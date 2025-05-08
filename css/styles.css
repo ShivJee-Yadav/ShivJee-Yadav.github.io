@@ -2004,7 +2004,7 @@ progress {
   color: #212529;
   background-color: rgba(189, 213, 186, 0.663);
   background-clip: padding-box;
-  border: 5px solid #000000;
+  border: 1px solid #000000;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2091,7 +2091,7 @@ progress {
   min-height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
 }
 .form-control-sm::file-selector-button {
   padding: 0.25rem 0.5rem;
@@ -2104,7 +2104,7 @@ progress {
   min-height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }
 .form-control-lg::file-selector-button {
   padding: 0.5rem 1rem;
