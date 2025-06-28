@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*!
 * Start Bootstrap - Grayscale v7.0.6 (https://startbootstrap.com/theme/grayscale)
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
@@ -10,6 +9,34 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+.skills-box {
+    border: 1px solid #ffffff;
+    padding: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 100%; /* changed from 80% */
+    margin-left: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.skill-tag {
+    display: inline-block;
+    background-color: rgba(173, 216, 230, 0.1); /* light blue tint */
+    color: #add8e6; /* light blue text */
+    border: 1px solid #add8e6;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px 6px 0 0;
+    font-size: 0.95rem;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11117,8 +11144,8 @@ body {
 }
 
 .projects-section {
-  padding: 7rem 0;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #101214 100%), url("../assets/img/smith.png");  background-size:auto;
+  padding: 4rem 0;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #101214 100%), black ;  background-size:auto;
 
   color: #fff;
   
