@@ -9,6 +9,16 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ section {
+  scroll-margin-top: 100px;
+}
+
+ @media screen and (max-width: 768px) {
+  header.masthead {
+    padding-top: 100px; /* Adjust based on your navbar height */
+  }
+}
+
 .skills-box {
     border: 1px solid #ffffff;
     padding: 25px;
