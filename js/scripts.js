@@ -14,20 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (emailEl) emailEl.innerHTML = link;
 });
 
-setInterval(() => {
-  const letters = document.querySelectorAll("#NameAnimation .char");
+window.onload = () => {
+  setInterval(() => {
+    const letters = document.querySelectorAll("#NameAnimation .char");
 
-  // Clear old glitches
-  letters.forEach(l => l.classList.remove("glitch-blur"));
+    letters.forEach(l => l.classList.remove("glitch-blur"));
 
-  // Pick 2–3 random letters
-  const glitchCount = Math.floor(Math.random() * 2) + 1;
+    const glitchCount = Math.floor(Math.random() * 2) + 1;
 
-  for (let i = 0; i < glitchCount; i++) {
-    const index = Math.floor(Math.random() * letters.length);
-    letters[index].classList.add("glitch-blur");
-  }
-}, 2000);
+    for (let i = 0; i < glitchCount; i++) {
+      const index = Math.floor(Math.random() * letters.length);
+      letters[index]?.classList.add("glitch-blur");
+    }
+  }, 2000);
+};
 
 // Continue with the rest of your existing script
 window.addEventListener('DOMContentLoaded', event => {
