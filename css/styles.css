@@ -1,9 +1,9 @@
 @charset "UTF-8";
-* Start Bootstrap - Grayscale v7.0.6 (https://startbootstrap.com/theme/grayscale)
+/* * Start Bootstrap - Grayscale v7.0.6 (https://startbootstrap.com/theme/grayscale)
 * Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE) */
 */
-/*!
+/* 
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
@@ -17,6 +17,13 @@
   header.masthead {
     padding-top: 100px; /* Adjust based on your navbar height */
   }
+}
+body {
+  margin: 0;
+  background: #000;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 .skills-box {
@@ -11100,6 +11107,11 @@ body {
   border: 0;
 }
 
+#NameAnimation span {
+  display: inline-block;
+}
+
+
 .masthead {
   position: relative;
   width: 100%;
@@ -11242,4 +11254,78 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+/* FORCE the name to render on top of everything */
+#NameAnimation {
+  position: relative;
+  z-index: 9999 !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  background: transparent !important;
+  text-shadow:
+    0 0 8px rgba(0,255,255,0.6),
+    0 0 15px rgba(0,255,255,0.4);
+}
+
+/* ---------------- HERO FIX (Bootstrap masthead) ---------------- */
+
+.masthead {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bootstrap background overlay */
+.masthead::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 1;
+}
+
+/* Put all content above the overlay */
+.masthead > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Random glitch pulses */
+/* Base neon glow — always clean */
+#NameAnimation .char {
+  position: relative;
+  display: inline-block;
+  color: #6ff;
+  text-shadow:
+    0 0 0px rgba(0,255,255,0.7),
+    0 0 5px rgba(0,255,255,0.4);
+      transition:
+    filter 0.4s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+/* Only glitch when this class is applied */
+#NameAnimation .char.glitch-blur {
+  filter: blur(6px);
+  opacity: 1.0;
+}
+
+/* RGB glitch layers */
+#NameAnimation .char.glitch-blur::before,
+#NameAnimation .char.glitch-blur::after {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#NameAnimation .char.glitch-blur::before {
+  animation: glitch1 1.0s infinite alternate-reverse ease-in-out;
+}
+
+#NameAnimation .char.glitch-blur::after {
+  animation: glitch2 1.0s infinite alternate-reverse ease-in-out;
 }

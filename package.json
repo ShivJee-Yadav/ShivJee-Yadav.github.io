@@ -1,0 +1,27 @@
+{
+  "name": "portfolios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "React.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShivJee-Yadav/ShivJee-Yadav.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ShivJee-Yadav/ShivJee-Yadav.github.io/issues"
+  },
+  "homepage": "https://github.com/ShivJee-Yadav/ShivJee-Yadav.github.io#readme",
+  "dependencies": {
+    "motion": "^12.33.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "vite": "^7.3.1"
+  }
+}
